@@ -13,7 +13,22 @@ describe('creating a database', () => {
         w.initDatabase('nodetest')
         .then(result => {
             w.initDatabase('nodetest')
-            .then(done)})
+            .then(done);
+        })
+        .catch(done);
+    });
+
+    it('should not create table if it already exists', (done) => {
+
+        let w = new wrapper(dbconfig);
+
+        w.initDatabase('nodetest')
+        .then((res) => {
+            w.initTable('aaa', 'nodetest')
+            .then(() => {
+                done();
+            });
+        })
         .catch(done);
     });
 });
