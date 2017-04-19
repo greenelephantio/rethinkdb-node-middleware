@@ -47,4 +47,14 @@ describe('listing all in a table', () => {
         });
     });
 
+    it('should insert object', (done) => {
+        let w = new wrapper(dbconfig);
+        let newObj = { a: 1 };
+
+        w.insert(newObj, 'aaa', 'nodetest')
+        .then((res) => {
+            done();
+        });
+    })
+
 });

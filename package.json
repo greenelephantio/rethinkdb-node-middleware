@@ -1,6 +1,6 @@
 {
   "name": "rethinkdb-node-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "rethinkdb generic crud methods",
   "main": "index.js",
   "scripts": {
